@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+}
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir("src")
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.itextpdf:kernel:7.2.3'
+    implementation 'com.itextpdf:sign:7.2.3'
+    implementation 'com.itextpdf:itext7-core:7.2.0'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
+    implementation 'org.bouncycastle:bcpkix-jdk15on:1.70'
+}
+
+
+application {
+    mainClassName = "org.example.Main"
+}
